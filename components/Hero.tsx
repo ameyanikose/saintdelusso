@@ -39,7 +39,8 @@ export default function Hero({}: Props) {
         {" "}
         <div>
           <p
-            className={`${monsieur.className} -mb-2 sm:-mb-2 md:-mb-4 lg:-mb-6  2xl:-mb-8 italic`}
+            className={`${monsieur.className} -mb-2 sm:-mb-2 md:-mb-4 lg:-mb-6  2xl:-mb-8 italic `}
+            data-notranslate
           >
             {" "}
             Saint de Lusso

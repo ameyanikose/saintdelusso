@@ -14,7 +14,7 @@ export default function Header({}: Props) {
   };
 
   return (
-    <header className="sticky top-0 w-screen text-black dark:text-white z-30 h-0">
+    <header className="sticky top-0 w-screen text-white z-30 h-0">
       <motion.div
         initial={{
           y: -10,

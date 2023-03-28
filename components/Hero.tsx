@@ -26,10 +26,11 @@ export default function Hero({}: Props) {
       transition={{
         duration: 1,
       }}
+      className="z-20"
     >
       {" "}
       <div
-        className="font-normal text-4xl tracking-tight leading-tighter text-center text-stone-800 dark:text-white
+        className="font-normal text-4xl tracking-tight leading-tighter text-center text-white
         sm:text-5xl
         md:text-6xl 
         lg:text-7xl lg:leading-tighter lg:max-w-8xl lg:px-40 

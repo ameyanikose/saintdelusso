@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="h-screen flex flex-col justify-center">
+      <div className="h-[80vh] sm:h-screen flex flex-col justify-center">
         <Hero />
         <div>
           <Image

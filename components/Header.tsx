@@ -3,6 +3,15 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../public/Asset 1.svg";
+import { Sorts_Mill_Goudy } from "next/font/google";
+
+const goudy = Sorts_Mill_Goudy({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+});
 
 type Props = {};
 
@@ -31,12 +40,18 @@ export default function Header({}: Props) {
         className="container flex items-center justify-between mx-auto max-w-8xl px-10 py-10"
       >
         {/* Logo */}
-        <div className="flex flex-row items-center">
+        <div className="flex flex-row  justify-center items-center">
           <Link href={"/"}>
-            <h1 className="font-normal text-md tracking-tight">
+            <Image
+              src={logo}
+              alt="Saint de Lusso Logo"
+              className=" w-[14rem]"
+            ></Image>
+
+            {/* <h1 className="font-normal text-md tracking-tight">
               {" "}
               Saint de Lusso
-            </h1>
+            </h1> */}
           </Link>
         </div>
 
@@ -54,8 +69,14 @@ export default function Header({}: Props) {
           </div>
 
           {/* Links */}
-          <div className="hidden lg:inline-flex flex-row items-center space-x-10 text-sm">
+          <div
+            className={`${goudy.className} hidden lg:inline-flex flex-row items-center space-x-10 text-sm`}
+          >
             <Link href={"/about"}>About </Link>
+            <Link href={"/product"}>Product </Link>
+            <Link href={"/luxuryandsustainability"}>
+              Luxury and Sustainability{" "}
+            </Link>
             <Link href={"/contact"}>Contact </Link>
             {/* <Link href={"/resume"}>Resume </Link> */}
           </div>
@@ -80,7 +101,9 @@ export default function Header({}: Props) {
                 }}
                 className="fixed top-0 right-0 h-full w-5/12 backdrop-blur-md bg-white/60 dark:bg-black/60 z-50 flex flex-col items-center text-lg "
               >
-                <div className="flex flex-col my-10 items-end space-y-7 h-full">
+                <div
+                  className={`${goudy.className} flex flex-col my-10 items-end space-y-7 h-full text-right`}
+                >
                   <div className="md:inline-flex mb-10" onClick={toggleMenu}>
                     {menuOpen ? (
                       <XMarkIcon className="h-6 w-6" />
@@ -89,6 +112,11 @@ export default function Header({}: Props) {
                     )}
                   </div>
                   <Link href={"/about"}>About </Link>
+                  <Link href={"/product"}>Product </Link>
+                  <Link href={"/luxuryandsustainability"}>
+                    Luxury and <br />
+                    Sustainability{" "}
+                  </Link>
                   <Link href={"/contact"}>Contact </Link>
                   {/* <Link href={"/resume"}>Resume </Link> */}
                 </div>

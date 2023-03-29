@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <div className="h-[80vh] sm:h-screen flex flex-col justify-center">
-        <Hero />
+        {/* <Hero /> */}
         <div>
           <Image
             src={girlwithgoat}
